@@ -1,0 +1,46 @@
+/**
+* changing defult color
+**/
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+/**
+* changing Navbar color
+**/
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #023047;
+    color: #ffffff;
+    padding: 25px 60px;
+}
+.cart{
+    position: relative;
+    background-color: #fff;
+    color: #023047;
+    padding: 5px;
+    font-size: 30px;
+    border-radius: 4px;
+}
+
+.cartAmount{
+    font-size: 16px;
+    background-color: red;
+    color: white;
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    padding: 3px;
+    border-radius: 4px;
+}
