@@ -112,7 +112,7 @@ body{
     text-align: center;
     margin-bottom: 20px;
 }
-.HomeBtn{
+.HomeBtn, .checkout, .remove{
     background-color: #023047;
     color: white;
     border: none;
@@ -121,7 +121,12 @@ body{
     cursor: pointer;
     margin-top: 10px;
 }
-
+.checkout{
+    background-color: green;
+}
+.remove{
+    background-color: red;
+}
 .bi-trash{
     color: red;
     font-weight: bold;
@@ -163,4 +168,7 @@ body{
     color: white;
     border-radius: 4px;
     padding: 3px 6px;
+}
+.bi{
+    padding: 4px;
 }

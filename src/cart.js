@@ -97,11 +97,30 @@ let update = (id)=>{
     document.getElementById(id).innerHTML=search.item;
 
     calculation();
+    toltalAmount();
 };
 
 let removeItem=(id)=>{
     let selectedItem = id;
     basket = basket.filter((x)=>x.id !==selectedItem.id);
     generateCartItems();
+    toltalAmount();
     localStorage.setItem("data", JSON.stringify(basket));
 };
+
+let toltalAmount=()=>{
+    if(basket.length!==0){
+        let amount= basket.map((x)=>{
+            let{item,id} =x;
+            let search =shopItemsData.find((y)=>y.id=== id) || [];
+            return item * search.price;
+        }).reduce((x,y)=>x+y ,0);
+        label.innerHTML=`
+        <h2> Total Bill: $ ${amount}</h2>
+        <button class="checkout"> Check Out<i class="bi bi-check-lg"></i></button>
+        <button class="remove">Clear<i class="bi bi-x-circle"></i></button>
+        `;
+    }
+    else return;
+}
+toltalAmount();
