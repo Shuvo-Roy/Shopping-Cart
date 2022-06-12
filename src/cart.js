@@ -118,9 +118,16 @@ let toltalAmount=()=>{
         label.innerHTML=`
         <h2> Total Bill: $ ${amount}</h2>
         <button class="checkout"> Check Out<i class="bi bi-check-lg"></i></button>
-        <button class="remove">Clear<i class="bi bi-x-circle"></i></button>
+        <button onclick="clearCart()" class="remove">Clear<i class="bi bi-x-circle"></i></button>
         `;
     }
     else return;
 }
 toltalAmount();
+
+
+let clearCart=()=>{
+    basket=[];
+    generateCartItems();
+    localStorage.setItem("data", JSON.stringify(basket));
+};
