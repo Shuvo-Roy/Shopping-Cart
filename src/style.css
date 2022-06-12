@@ -32,6 +32,7 @@ body{
     color: #ffffff;
     padding: 25px 60px;
     margin-bottom: 30px;
+    align-items: center;
 }
 .cart{
     position: relative;
@@ -61,6 +62,7 @@ body{
     grid-template-columns: repeat(4,223px);
     gap: 30px;
     justify-content: center;
+    margin-bottom: 20px;
 }
 @media(max-width:1000px){
     .shop{
@@ -75,6 +77,10 @@ body{
 
 .item{
     border: 1px solid #48cae4;
+    border-radius: 5px;
+}
+.item img{
+    width: 100%;
     border-radius: 5px;
 }
 .details{
